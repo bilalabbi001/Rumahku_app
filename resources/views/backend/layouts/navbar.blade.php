@@ -11,14 +11,14 @@
 
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <img src="{{ asset('assets/image/image1.jpg') }}" class="user-image img-circle object-cover"
+                <img src="{{ asset('assets/img/logo/user.png') }}" class="user-image img-circle object-cover"
                     alt="User Image">
                 <span class="d-none d-md-inline">Admin</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <!-- User image -->
                 <li class="user-header">
-                    <img src="{{ asset('assets/image/image1.jpg') }}" class="img-circle" alt="User Image">
+                    <img src="{{ asset('assets/img/logo/user.png') }}" class="img-circle" alt="User Image">
                     <p>
                         {{ auth()->user()->email }}
                     </p>
