@@ -7,12 +7,18 @@ use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\BreezeController;
 use App\Http\Controllers\backend\PutanutuController;
 use App\Http\Controllers\frontend\homeController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/storage-link', function () {
+    Artisan::call('storage-link');
+    return 'Storage berhasil dibuat';
+});
 
 Route::get('/', [homeController::class, 'index'])->name('home');
 Route::get('/produk', [homeController::class, 'produk'])->name('produk');
