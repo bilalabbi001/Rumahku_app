@@ -10,16 +10,6 @@ use App\Http\Controllers\frontend\homeController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/storage-link', function () {
-    Artisan::call('storage-link');
-    return 'Storage berhasil dibuat';
-});
-
 Route::get('/', [homeController::class, 'index'])->name('home');
 Route::get('/produk', [homeController::class, 'produk'])->name('produk');
 Route::get('/aluna', [homeController::class, 'aluna'])->name('aluna');

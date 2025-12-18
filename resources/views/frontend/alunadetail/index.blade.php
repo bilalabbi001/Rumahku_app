@@ -144,7 +144,7 @@
                 <div class="text-xs md:text-sm space-y-1">
                     <p><i class="fa-solid fa-phone"></i> +62 1717 865 888</p>
                     <p><i class="fa-solid fa-envelope"></i> Kartini.nabindra@gmail.com</p>
-                    <p><i class="fa-solid fa-globe"></i> www.lenterarumah.com</p>
+                    <p><i class="fa-solid fa-globe"></i> www.telagakahuripanofficial.com</p>
                 </div>
             </div>
 
