@@ -13,7 +13,8 @@ class homeController extends Controller
     public function index()
     {
         $data       = [
-            'title'     => 'Beranda'
+            'title'     => 'Beranda',
+            'metaDescription'   => 'Perumahan Telaga Kahuripan menawarkan rumah eksklusif, ruko, dan area komersial strategis di Bogor. Cocok untuk hunian dan investasi.',
         ];
         return view('frontend/home/index', $data);
     }
