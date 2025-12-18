@@ -18,7 +18,7 @@
     <div class="relative bg-gray-900 py-20 px-2 overflow-hidden">
         <!-- Gambar Latar Belakang Overlay (untuk efek gelap) -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="City Background"
+            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="Telaga Kahuripan"
                 class="w-full h-full object-cover object-top opacity-20">
             <!-- Anda bisa menyesuaikan opacity (misal: opacity-40, opacity-50) untuk tingkat kegelapan -->
         </div>
@@ -41,7 +41,7 @@
             @foreach ($produks as $produk)
                 <div class="bg-white rounded-md overflow-hidden card-shadow">
                     <div class="relative">
-                        <img src="{{ asset('storage/images/' . $produk->image) }}"
+                        <img src="{{ asset('storage/images/' . $produk->image) }}" alt="{{ $produk->title }}"
                             alt="Modern two-story house with large windows and wooden accents in a suburban neighborhood"
                             class="w-full object-cover object-contain" />
                         <div class="absolute -top-1 right-4 bg-red-500 text-white px-2 py-1 rounded-sm text-sm font-bold">

@@ -22,7 +22,8 @@ class homeController extends Controller
     public function produk()
     {
         $data       = [
-            'title'     => 'Produk'
+            'title'                 => 'Produk',
+            'metaDescription'       => 'Temukan unit properti Telaga Kahuripan dengan desain modern, lokasi strategis, dan nilai investasi tinggi. Cocok untuk hunian dan bisnis bilal.',
         ];
         return view('frontend/produk/index', $data);
     }
@@ -70,7 +71,8 @@ class homeController extends Controller
     public function kanaka()
     {
         $data       = [
-            'title'     => 'Kanaka'
+            'title'     => 'Kanaka',
+            'metaDescription'       => 'Area komersial Telaga Kahuripan cocok untuk ruko, kantor, dan usaha strategis dengan akses mudah dan lingkungan premium.',
         ];
         return view('frontend/kanaka/index', $data);
     }
@@ -78,7 +80,8 @@ class homeController extends Controller
     public function kontak()
     {
         $data       = [
-            'title'     => 'Kontak'
+            'title'     => 'Kontak',
+            'metaDescription'       => 'Hubungi marketing Telaga Kahuripan untuk informasi harga, promo, dan ketersediaan unit hunian dan area komersial.',
         ];
         return view('frontend/kontak/index', $data);
     }
