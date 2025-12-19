@@ -32,8 +32,14 @@ class PutanutuController extends Controller
         // Cek validasi inputan dari user
         $data = $request->validated();
 
-        // Upload langsung ke public_path
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
         // Cek inputan file gambar utama dari user
         if ($request->hasFile('image')) { // jika ada request   file gambar dari inputan user
@@ -94,8 +100,14 @@ class PutanutuController extends Controller
         // Cek inputan dari form user
         $data = $request->validated();
 
-        //Upload langsung ke public_path
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
         // Cek ketika user upload file baru
         if ($request->hasFile('image')) {
@@ -124,7 +136,7 @@ class PutanutuController extends Controller
             if ($request->hasFile($field)) {
 
                 // Hapus file lama
-                if (!empty($request->image)) {
+                if (!empty($produk->$field)) {
                     $oldFile = $uploadPath . '/' . $produk->$field;
                     if (file_exists($oldFile)) {
                         unlink($oldFile);
@@ -156,8 +168,14 @@ class PutanutuController extends Controller
         // Cari data berdasarkan id
         $data = Putanutu::findOrFail($id);
 
-        // Upload gambar langsung
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
         // Hapus file gambar utama
         if ($data->image && file_exists($uploadPath . '/' . $data->image)) {

@@ -31,8 +31,14 @@ class AlunaController extends Controller
         // Validasi dara dari form
         $data = $request->validated();
 
-        // Upload langsung ke public_html
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
 
         // Upload file gambar
@@ -88,12 +94,17 @@ class AlunaController extends Controller
         // Validasi form input dari user
         $data = $request->validated();
 
-        // Upload langsung ke public_html
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
         // Cek ketika user upload file baru
         if ($request->hasFile('image')) {
-
             // Hapus file lama
             if (!empty($produk->image)) {
                 $oldFile = $uploadPath . '/' . $produk->image;
@@ -118,7 +129,7 @@ class AlunaController extends Controller
             // Hapus file lama
             if ($request->hasFile($field)) {
 
-                if (!empty($request->$field)) {
+                if (!empty($produk->$field)) {
                     $oldFile = $uploadPath . '/' . $produk->$field;
                     if (file_exists($oldFile)) {
                         unlink($oldFile);
@@ -149,8 +160,14 @@ class AlunaController extends Controller
         // Cari data berdasarkan id
         $data = Aluna::findOrFail($id);
 
-        // Path polder gambar langsung
-        $uploadPath = public_path('assets/images');
+        // Path berdasrkan ENV
+        if (app()->environment('production')) {
+            // HOSTINGER
+            $uploadPath = base_path('../public_html/assets/images');
+        } else {
+            // LOCALHOST
+            $uploadPath = public_path('assets/images');
+        }
 
 
         // Hapus file utama (image)
