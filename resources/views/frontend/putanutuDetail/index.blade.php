@@ -41,7 +41,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image3) }}"
-                                class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]    ">
+                                class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image4) }}"
