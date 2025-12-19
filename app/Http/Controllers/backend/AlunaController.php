@@ -31,11 +31,15 @@ class AlunaController extends Controller
         // Validasi dara dari form
         $data = $request->validated();
 
+        // Upload langsung ke public_html
+        $uploadPath = public_path('assets/images');
+
+
         // Upload file gambar
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/images', $fileName);
+            $file->move($uploadPath, $fileName);
             $data['image'] = $fileName;
         }
 
@@ -47,7 +51,7 @@ class AlunaController extends Controller
             if ($request->hasFile($field)) {
                 $file = $request->file($field);
                 $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-                $file->storeAs('public/images', $fileName);
+                $file->move($uploadPath, $fileName);
 
                 $data[$field] = $fileName;
             }
@@ -84,18 +88,25 @@ class AlunaController extends Controller
         // Validasi form input dari user
         $data = $request->validated();
 
+        // Upload langsung ke public_html
+        $uploadPath = public_path('assets/images');
+
         // Cek ketika user upload file baru
         if ($request->hasFile('image')) {
 
             // Hapus file lama
-            if ($produk->image && Storage::exists('public/images/' . $produk->image)) { // jika ada file lama maka hapus file lama
-                Storage::delete('public/images/' . $produk->image); // Hapus file yang lama
+            if (!empty($produk->image)) {
+                $oldFile = $uploadPath . '/' . $produk->image;
+                if (file_exists($oldFile)) {
+                    unlink($oldFile);
+                }
             }
 
             // Upload file baru
             $file = $request->file('image'); // simpan file baru ketika ada upload
             $fileName = uniqid() . '.' . $file->getClientOriginalExtension(); // Beri nama unik pada file image
-            $file->storeAs('public/images', $fileName); // masukan file ke polder public/images
+            $file->move($uploadPath, $fileName); // masukan file ke polder public/images
+
             $data['image'] = $fileName; // Simpan file baru ke dalam array
         }
 
@@ -106,14 +117,20 @@ class AlunaController extends Controller
 
             // Hapus file lama
             if ($request->hasFile($field)) {
-                if ($produk->$field && Storage::exists('public/images/' . $produk->$field)) {
-                    Storage::delete('public/images/' . $produk->$field);
+
+                if (!empty($request->$field)) {
+                    $oldFile = $uploadPath . '/' . $produk->$field;
+                    if (file_exists($oldFile)) {
+                        unlink($oldFile);
+                    }
                 }
+
 
                 // Upload file baru
                 $file = $request->file($field);
                 $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-                $file->storeAs('public/images', $fileName);
+                $file->move($uploadPath, $fileName);
+
                 $data[$field] = $fileName;
             }
         }
@@ -132,18 +149,22 @@ class AlunaController extends Controller
         // Cari data berdasarkan id
         $data = Aluna::findOrFail($id);
 
+        // Path polder gambar langsung
+        $uploadPath = public_path('assets/images');
+
+
         // Hapus file utama (image)
-        if ($data->image && Storage::exists('public/images/' . $data->image)) {
-            Storage::delete('public/images/' . $data->image);
+        if ($data->image && file_exists($uploadPath . '/' . $data->image)) {
+            unlink($uploadPath . '/' . $data->image);
         }
 
-        // Hapus file image 1-4 jika ada
 
+        // Hapus file image 1-4 jika ada
         for ($i = 1; $i <= 4; $i++) {
             $field = 'image' . $i;
 
-            if ($data->$field && Storage::exists('public/images/' . $data->$field)) {
-                Storage::delete('public/images/' . $data->$field);
+            if ($data->$field && file_exists($uploadPath . '/' . $data->$field)) {
+                unlink($uploadPath . '/' . $data->$field);
             }
         }
 

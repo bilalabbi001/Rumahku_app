@@ -28,23 +28,23 @@
                 <div class="swiper mySwiper2 rounded-lg">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image) }}"
                                 class="w-full h-full object-cover object-bottom sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px] lg:object-cover">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image1) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image1) }}"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image2) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image2) }}"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image3) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image3) }}"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]    ">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image4) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image4) }}"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                     </div>
@@ -57,23 +57,23 @@
                 <div class="swiper mySwiper mt-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image) }}"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image1) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image1) }}"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image2) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image2) }}"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image3) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image3) }}"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('storage/images/' . $produk->image4) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image4) }}"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                     </div>

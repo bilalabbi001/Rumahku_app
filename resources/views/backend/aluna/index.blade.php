@@ -58,7 +58,7 @@
                                     <td>{{ $produk->slug }}</td>
                                     <td>{{ $produk->description }}</td>
                                     <td>
-                                        <img src="{{ asset('storage/images/' . $produk->image) }}"
+                                        <img src="{{ asset('assets/images/' . $produk->image) }}"
                                             alt="{{ $produk->title }}" width="110px">
                                     </td>
                                     <td>

@@ -145,7 +145,7 @@
 
                                     <input type="hidden" value="{{ $produk->image }}" name="gambarLama">
 
-                                    <img src="{{ asset('storage/images/' . $produk->image) }}"
+                                    <img src="{{ asset('assets/images/' . $produk->image) }}"
                                         class="img-fluid tampil-image mb-3 d-block" width="100"
                                         style="border-radius:20px" alt="{{ $produk->title }}" id="preview-image">
 

@@ -32,12 +32,15 @@ class PutanutuController extends Controller
         // Cek validasi inputan dari user
         $data = $request->validated();
 
+        // Upload langsung ke public_path
+        $uploadPath = public_path('assets/images');
+
         // Cek inputan file gambar utama dari user
-        if ($request->hasFile('image')) { // jika ada request file gambar dari inputan user
+        if ($request->hasFile('image')) { // jika ada request   file gambar dari inputan user
 
             $file = $request->file('image'); // Ambil file gambar dari inputan user
             $fileName = uniqid() . '.' . $file->getClientOriginalExtension(); // Ganti nama file gambar dan set menjadi unik
-            $file->storeAs('public/images', $fileName); // Masukan file gambar ke polder images
+            $file->move($uploadPath, $fileName); // Masukan file gambar ke polder images
 
             $data['image'] = $fileName;
         }
@@ -51,7 +54,7 @@ class PutanutuController extends Controller
 
                 $file = $request->file($field);
                 $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-                $file->storeAs('public/images', $fileName);
+                $file->move($uploadPath, $fileName);
 
                 $data[$field] = $fileName;
             }
@@ -91,18 +94,24 @@ class PutanutuController extends Controller
         // Cek inputan dari form user
         $data = $request->validated();
 
+        //Upload langsung ke public_path
+        $uploadPath = public_path('assets/images');
+
         // Cek ketika user upload file baru
         if ($request->hasFile('image')) {
 
             // Hapus file lama
-            if ($produk->image && Storage::exists('public/images/' . $produk->image)) { // Jika ada file lama maka hapus file lama
-                Storage::delete('public/images/' . $produk->image); // Hapus file gambar dalem folder images
+            if (!empty($request->image)) {
+                $oldFile = $uploadPath . '/' . $produk->image;
+                if (file_exists($oldFile)) {
+                    unlink($oldFile);
+                }
             }
 
             // Upload file baru jika ada perubahan file
             $file = $request->file('image');
             $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/images', $fileName);
+            $file->move($uploadPath, $fileName);
 
             // Simpan file baru ke dalam array
             $data['image'] = $fileName;
@@ -115,14 +124,17 @@ class PutanutuController extends Controller
             if ($request->hasFile($field)) {
 
                 // Hapus file lama
-                if ($produk->$field && Storage::exists('public/images/' . $produk->$field)) {
-                    Storage::delete('public/images/' . $produk->$field);
+                if (!empty($request->image)) {
+                    $oldFile = $uploadPath . '/' . $produk->$field;
+                    if (file_exists($oldFile)) {
+                        unlink($oldFile);
+                    }
                 }
 
                 // Upload file baru
                 $file = $request->file($field);
                 $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-                $file->storeAs('public/images', $fileName);
+                $file->move($uploadPath, $fileName);
 
                 // Simpan file baru ke dalem array
                 $data[$field] = $fileName;
@@ -141,20 +153,23 @@ class PutanutuController extends Controller
     public function destroy(string $id)
     {
 
+        // Cari data berdasarkan id
         $data = Putanutu::findOrFail($id);
 
+        // Upload gambar langsung
+        $uploadPath = public_path('assets/images');
+
         // Hapus file gambar utama
-        if ($data->image && Storage::exists('public/images/' . $data->image)) {
-            Storage::delete('public/images/' . $data->image);
+        if ($data->image && file_exists($uploadPath . '/' . $data->image)) {
+            unlink($uploadPath . '/' . $data->image);
         }
 
         // Hapus data file gambar1 - gambar4
-
         for ($i = 1; $i <= 4; $i++) {
             $field = 'image' . $i;
 
-            if ($data->$field && Storage::exists('public/images/' . $data->$field)) {
-                Storage::delete('public/images/' . $data->$field);
+            if ($data->$field && file_exists($uploadPath . '/' . $data->$field)) {
+                unlink($uploadPath . '/' . $data->$field);
             }
         }
 

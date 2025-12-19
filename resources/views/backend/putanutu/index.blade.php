@@ -58,8 +58,8 @@
                                     <td>{{ $produk->slug }}</td>
                                     <td>{{ $produk->description }}</td>
                                     <td>
-                                        <img src="{{ asset('storage/images/' . $produk->image) }}"
-                                            alt="{{ $produk->title }}" width="110px">
+                                        <img src="{{ asset('assets/images/' . $produk->image) }}" alt="{{ $produk->title }}"
+                                            width="110px">
                                     </td>
                                     <td>
                                         <div class="d-flex">
