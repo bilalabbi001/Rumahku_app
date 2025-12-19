@@ -23,7 +23,7 @@
             <div class="rounded-2xl p-2">
                 <h2 class="text-sm md:text-lg font-bold mb-2">{{ $produk->title }}</h2>
 
-                <!-- Main Swiper -->
+
                 <div class="swiper mySwiper2 rounded-lg">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
