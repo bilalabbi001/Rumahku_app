@@ -7,11 +7,11 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
+                <div class="row mb-2 align-items-center">
+                    <div class="col-12 col-md-6">
                         <h1 class="text-semibold">@yield('title')</h1>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12 col-md-6 mt-2 mt-md-0">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ Route('admin.dashboard') }}">Home</a></li>
                             <li class="breadcrumb-item active">@yield('title')</li>
@@ -26,7 +26,7 @@
 
             <!-- Default box -->
             <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
                     <a href="{{ route('admin.putanutu.create') }}" class="btn btn-sm btn-primary">
                         <i class="fas fa-plus mr-2"></i>Tambah data</a>
                 </div>
@@ -37,54 +37,55 @@
                             {{ session('message') }}
                         </div>
                     @endif
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm mt-4">
 
-                    <table class="table table-bordered table-sm mt-4">
+                            <thead>
+                                <tr class="small">
+                                    <th>No</th>
+                                    <th>Tittle</th>
+                                    <th>Slug</th>
+                                    <th class="d-none d-md-table-cell">Deskripsi</th>
+                                    <th>Gambar</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($produks as $produk)
+                                    <tr>
+                                        <td class="small">{{ $loop->iteration }}</td>
+                                        <td class="small">{{ $produk->title }}</td>
+                                        <td class="small">{{ $produk->slug }}</td>
+                                        <td class="d-none d-md-table-cell text-xs">{{ $produk->description }}</td>
+                                        <td class="text-center">
+                                            <img src="{{ asset('assets/images/' . $produk->image) }}"
+                                                alt="{{ $produk->title }}" width="110px">
+                                        </td>
+                                        <td>
+                                            <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
 
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Tittle</th>
-                                <th>Slug</th>
-                                <th>Deskripsi</th>
-                                <th>Gambar</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($produks as $produk)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $produk->title }}</td>
-                                    <td>{{ $produk->slug }}</td>
-                                    <td>{{ $produk->description }}</td>
-                                    <td>
-                                        <img src="{{ asset('assets/images/' . $produk->image) }}" alt="{{ $produk->title }}"
-                                            width="110px">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="mr-2">
                                                 <a href="{{ route('admin.putanutu.edit', $produk->id) }}"
-                                                    class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                                            </div>
-                                            <div>
+                                                    class="btn btn-sm btn-primary mr-2 mt-2"><i class="fas fa-edit"></i></a>
 
                                                 <button type="button" onclick="confirmDelete('{{ $produk->id }}')"
-                                                    class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>
+                                                    class="btn btn-sm btn-danger mr-2 mt-2"><i class="fas fa-trash"></i>
                                                 </button>
+
                                                 <form id="delete-form-{{ $produk->id }}"
                                                     action="{{ route('admin.putanutu.destroy', $produk->id) }}"
                                                     method="POST" style="display: none">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>
+
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
                 <!-- /.card-body -->
             </div>

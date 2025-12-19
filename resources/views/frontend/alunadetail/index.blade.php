@@ -28,7 +28,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image) }}" alt="{{ $produk->title }}"
-                                class="w-full h-full object-cover object-bottom sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px] lg:object-cover">s
+                                class="w-full h-full object-cover object-bottom sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px] lg:object-cover">
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image1) }}" alt="{{ $produk->title }}"

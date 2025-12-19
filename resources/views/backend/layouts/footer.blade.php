@@ -1,4 +1,4 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <small>Copyright &copy; 2025-2026 All rights</small>
     reserved.
 </footer>

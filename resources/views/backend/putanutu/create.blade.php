@@ -34,9 +34,9 @@
                     <form action="{{ Route('admin.putanutu.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Title</label>
+                                    <label for="title" class="form-label small">Title</label>
                                     <input type="text" name="title" id="title"
                                         class="form-control @error('title') is-invalid @enderror"
                                         value="{{ old('title') }}">
@@ -49,9 +49,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-12 col-md-6 col-lg-3">
                                 <div class="mb-3">
-                                    <label for="harga" class="form-label">Harga</label>
+                                    <label for="harga" class="form-label small">Harga</label>
                                     <input type="text" name="harga" id="harga"
                                         class="form-control @error('harga') is-invalid @enderror"
                                         value="{{ old('harga') }}">
@@ -67,9 +67,9 @@
                         </div>
 
                         <div class="row justify-content-end">
-                            <div class="col-2">
+                            <div class="col-6 col-md-3">
                                 <div class="mb-3">
-                                    <label for="luasBangunan" class="form-label">Luas Bangunan</label>
+                                    <label for="luasBangunan" class="form-label small">Luas Bangunan</label>
                                     <input type="text" name="luasBangunan" id="luasBangunan"
                                         class="form-control @error('luasBangunan') is-invalid @enderror"
                                         value="{{ old('luasBangunan') }}">
@@ -82,9 +82,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-6 col-md-3">
                                 <div class="mb-3">
-                                    <label for="luasTanah" class="form-label">luas Tanah</label>
+                                    <label for="luasTanah" class="form-label small">luas Tanah</label>
                                     <input type="text" name="luasTanah" id="luasTanah"
                                         class="form-control @error('luasTanah') is-invalid @enderror"
                                         value="{{ old('luasTanah') }}">
@@ -97,9 +97,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-6 col-md-3">
                                 <div class="mb-3">
-                                    <label for="kamarTidur" class="form-label">Kamar Tidur</label>
+                                    <label for="kamarTidur" class="form-label small">Kamar Tidur</label>
                                     <input type="text" name="kamarTidur" id="kamarTidur"
                                         class="form-control @error('kamarTidur') is-invalid @enderror"
                                         value="{{ old('kamarTidur') }}">
@@ -112,9 +112,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-2">
+                            <div class="col-6 col-md-3">
                                 <div class="mb-3">
-                                    <label for="kamarMandi" class="form-label">Kamar Mandi</label>
+                                    <label for="kamarMandi" class="form-label small">Kamar Mandi</label>
                                     <input type="text" name="kamarMandi" id="kamarMandi"
                                         class="form-control @error('kamarMandi') is-invalid @enderror"
                                         value="{{ old('kamarMandi') }}">
@@ -131,12 +131,12 @@
                         </div>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-3">
 
                                     <img src="" width="300px" class="img-fluid tampil-image mb-3" alt="">
 
-                                    <label for="image" class="form-label">Gambar</label>
+                                    <label for="image" class="form-label small">Gambar</label>
                                     <input type="file" class="form-control @error('image') is-invalid @enderror"
                                         name="image" id="image" onchange="tampilImage()" value="{{ old('image') }}">
 
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-6 col-md-3 mb-3">
                                 <div class="mb-3">
                                     <input type="file" class="form-control @error('image1') is-invalid @enderror"
                                         name="image1">
@@ -164,7 +164,7 @@
 
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-3 mb-3">
                                 <div class="mb-3">
 
                                     <input type="file" class="form-control @error('image2') is-invalid @enderror"
@@ -178,7 +178,7 @@
 
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-3 mb-3">
                                 <div class="mb-3">
 
                                     <input type="file" class="form-control @error('image3') is-invalid @enderror"
@@ -192,7 +192,7 @@
 
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-3 mb-3">
                                 <div class="mb-3">
 
                                     <input type="file" class="form-control @error('image4') is-invalid @enderror"
@@ -209,7 +209,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
+                            <label for="description" class="form-label small">Description</label>
                             <textarea name="description" class="form-control @error('description') is-invalid @enderror">{{ old('description') }}</textarea>
 
                             @error('description')
@@ -219,8 +219,10 @@
                             @enderror
 
                         </div>
-                        <button type="reset" class="btn btn-danger btn-sm">Reset</button>
-                        <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+                        <div class="d-flex flex-column flex-md-row">
+                            <button type="reset" class="btn btn-danger btn-sm mr-2 mt-2">Reset</button>
+                            <button type="submit" class="btn btn-success btn-sm mr-2 mt-2">Simpan</button>
+                        </div>
                     </form>
                 </div>
                 <!-- /.card-body -->
