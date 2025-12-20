@@ -98,70 +98,6 @@
                 </div>
             </div>
 
-            <!-- Category Card 3 - Ace -->
-            {{-- <div class="category-card group residential fade-in" data-category="residential">
-                <div
-                    class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="{{ asset('assets/image/Acee.jpg') }}"
-                            alt="Rumah modern minimalis dengan taman depan dan garasi"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Residensial</span>
-                        </div>
-                    </div>
-                    <div class="p-2">
-                        <div class="flex items-center">
-                            <i class="fas fa-home text-blue-500 mr-2"></i>
-                            <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">CLUSTER ACE</h3>
-                        </div>
-                        <p class="text-xs text-gray-600 mb-2 lg:text-[16px]">Temukan berbagai pilihan rumah mulai dari tipe
-                            sederhana
-                            hingga mewah.
-                        </p>
-                        <a href="{{ Route('ace') }}"
-                            class=" text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">
-                            Lihat Properti
-                            <i class="fas fa-chevron-right ml-1 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
-
-            <!-- Category Card 4 - Breeze -->
-            {{-- <div class="category-card group residential fade-in" data-category="residential">
-                <div
-                    class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-lg">
-                    <div class="relative overflow-hidden h-48">
-                        <img src="{{ asset('assets/image/putanutu.png') }}"
-                            alt="Rumah modern minimalis dengan taman depan dan garasi"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Residensial</span>
-                        </div>
-                    </div>
-                    <div class="p-2">
-                        <div class="flex items-center">
-                            <i class="fas fa-home text-blue-500 mr-2"></i>
-                            <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">CLUSTER BREEZE</h3>
-                        </div>
-                        <p class="text-xs lg:text-[16px] text-gray-600 mb-2">Temukan berbagai pilihan rumah mulai dari tipe
-                            sederhana
-                            hingga mewah.
-                        </p>
-                        <a href="{{ Route('breeze') }}"
-                            class=" text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">
-                            Lihat Properti
-                            <i class="fas fa-chevron-right ml-1 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
-
             <!-- Category Card 4 - Ruko -->
             <div class="category-card group residential fade-in" data-category="commercial">
                 <div
@@ -181,9 +117,8 @@
                             {{-- <i class="fas fa-home text-blue-500 mr-2"></i> --}}
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">KANAKA</h3>
                         </div>
-                        <p class="text-xs lg:text-[16px] text-gray-600 mb-2">Temukan berbagai pilihan rumah mulai dari tipe
-                            sederhana
-                            hingga mewah.
+                        <p class="text-xs lg:text-[16px] text-gray-600 mb-2">Temukan area komersil mulai dari harga
+                            termurah
                         </p>
                         <a href="{{ Route('kanaka') }}"
                             class="text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">

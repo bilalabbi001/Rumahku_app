@@ -12,8 +12,9 @@ class homeController extends Controller
 {
     public function index()
     {
+
         $data       = [
-            'title'     => 'Beranda',
+            'title'     => 'Cluster di Bogor | Harga Terbaru',
             'metaDescription'   => 'Perumahan Telaga Kahuripan menawarkan rumah eksklusif, ruko, dan area komersial strategis di Bogor. Cocok untuk hunian dan investasi.',
         ];
         return view('frontend/home/index', $data);
@@ -22,8 +23,8 @@ class homeController extends Controller
     public function produk()
     {
         $data       = [
-            'title'                 => 'Produk',
-            'metaDescription'       => 'Temukan unit properti Telaga Kahuripan dengan desain modern, lokasi strategis, dan nilai investasi tinggi. Cocok untuk hunian dan bisnis bilal.',
+            'title'                 => 'Cari Cluster Terbaru Di Bogor',
+            'metaDescription'       => 'Temukan unit properti di Telaga Kahuripan dengan desain modern, lokasi strategis, dan nilai investasi yang tinggi. Cocok untuk hunian dan bisnis.',
         ];
         return view('frontend/produk/index', $data);
     }
@@ -31,8 +32,7 @@ class homeController extends Controller
     public function aluna()
     {
         $data       = [
-
-            'title'     => 'Aluna',
+            'title'     => 'Pilihan Clutser Terbaru Di Bogor',
             'produks'   => Aluna::get()
         ];
 
@@ -43,35 +43,35 @@ class homeController extends Controller
     {
 
         $data       = [
-            'title'     => 'Putanutu',
+            'title'     => 'Cluster Dengan Harga Terbaik',
             'produks'   => Putanutu::get()
         ];
         return view('frontend/putanutu/index', $data);
     }
 
-    public function ace()
-    {
-        $data   = [
-            'title'     => 'Ace',
-            'produks'   => Ace::get()
-        ];
-        return view('frontend/ace/index', $data);
-    }
+    // public function ace()
+    // {
+    //     $data   = [
+    //         'title'     => 'Ace',
+    //         'produks'   => Ace::get()
+    //     ];
+    //     return view('frontend/ace/index', $data);
+    // }
 
-    public function breeze()
-    {
+    // public function breeze()
+    // {
 
-        $data       = [
-            'title'     => 'Breeze',
-            'produks'   => Breeze::get(),
-        ];
-        return view('frontend/breeze/index', $data);
-    }
+    //     $data       = [
+    //         'title'     => 'Breeze',
+    //         'produks'   => Breeze::get(),
+    //     ];
+    //     return view('frontend/breeze/index', $data);
+    // }
 
     public function kanaka()
     {
         $data       = [
-            'title'     => 'Kanaka',
+            'title'     => 'Area Komersil Di Bogor',
             'metaDescription'       => 'Area komersial Telaga Kahuripan cocok untuk ruko, kantor, dan usaha strategis dengan akses mudah dan lingkungan premium.',
         ];
         return view('frontend/kanaka/index', $data);
@@ -80,7 +80,7 @@ class homeController extends Controller
     public function kontak()
     {
         $data       = [
-            'title'     => 'Kontak',
+            'title'     => 'Kontak Kami',
             'metaDescription'       => 'Hubungi marketing Telaga Kahuripan untuk informasi harga, promo, dan ketersediaan unit hunian dan area komersial.',
         ];
         return view('frontend/kontak/index', $data);

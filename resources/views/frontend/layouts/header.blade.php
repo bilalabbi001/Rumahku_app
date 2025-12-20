@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {{-- TTITLE CEO --}}
-    <title>{{ $title ?? 'Telaga Kahuripan - Hunian & Area Komersial Strategis di Bogor' }}</title>
+    <title>{{ $title ?? 'Jual Cluster Di Bogor' }}</title>
 
 
     {{-- META DESCRIPTION --}}

@@ -40,38 +40,38 @@
                 class="{{ request()->routeIs('kontak') ? 'text-white bg-blue-700 px-3 py-2 rounded-md text-sm font-bold' : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">Kontak</a>
         </div>
     </div>
+    
+    {{-- NAVBAR MOBILE --}}
+    <div class="z-30 fixed bottom-0 left-0 right-0 bg-lime-950 p-1 sm:hidden">
+        <ul class="flex justify-between text-white mx-4 py-1">
+            <li>
+                <a href="{{ Route('home') }}" class="flex justify-center flex-col items-center opacity-70">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span class="text-[10px]">Beranda</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ Route('produk') }}" class="flex justify-center flex-col items-center opacity-70">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                    <span class="text-[10px]">Produk</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ Route('tentangkami') }}" class="flex justify-center flex-col items-center opacity-70">
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <span class="text-[10px]">Tentang Kami</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ Route('kontak') }}" class="flex justify-center flex-col items-center opacity-70">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span class="text-[10px]">Kontak</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
-{{-- NAVBAR MOBILE --}}
-<div class="z-30 fixed bottom-0 left-0 right-0 bg-lime-950 p-1 sm:hidden">
-    <ul class="flex justify-between text-white mx-4 py-1">
-        <li>
-            <a href="{{ Route('home') }}" class="flex justify-center flex-col items-center opacity-70">
-                <ion-icon name="home-outline"></ion-icon>
-                <span class="text-[10px]">Beranda</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ Route('produk') }}" class="flex justify-center flex-col items-center opacity-70">
-                <ion-icon name="clipboard-outline"></ion-icon>
-                <span class="text-[10px]">Produk</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ Route('tentangkami') }}" class="flex justify-center flex-col items-center opacity-70">
-                <ion-icon name="receipt-outline"></ion-icon>
-                <span class="text-[10px]">Tentang Kami</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ Route('kontak') }}" class="flex justify-center flex-col items-center opacity-70">
-                <ion-icon name="call-outline"></ion-icon>
-                <span class="text-[10px]">Kontak</span>
-            </a>
-        </li>
-    </ul>
-</div>
-</nav>
 
 <script>
     // Ambil elemen tombol dan menu dropdown

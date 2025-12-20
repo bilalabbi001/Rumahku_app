@@ -12,11 +12,6 @@
             <p class="mt-4 text-sm md:text-xl max-w-2xl mx-auto">
                 Ruang bisnis premium dengan desain modern dan lokasi strategis untuk mendukung perkembangan usaha Anda.
             </p>
-
-            {{-- <a href=""
-                class="inline-block text-sm mt-6 px-6 py-3 bg-yellow-400 text-white rounded-lg font-semibold hover:bg-yellow-600 transition md:text-xl md:font-bold">
-                Hubungi Kami
-            </a> --}}
         </div>
     </section>
 
