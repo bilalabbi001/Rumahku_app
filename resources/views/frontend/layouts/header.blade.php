@@ -8,7 +8,7 @@
 
     {{-- TTITLE CEO --}}
     <title>{{ $title ?? 'Jual Cluster Di Bogor' }}</title>
-
+    
 
     {{-- META DESCRIPTION --}}
     <meta name="description"
@@ -17,7 +17,7 @@
 
     {{-- META KEYWORDS (opsional) --}}
     <meta name="keywords"
-        content="perumahan bogor, rumah dijual bogor, telaga kahuripan, hunian modern bogor, area komersial bogor, investasi properti">
+        content="perumahan dibogor, rumah dijual dibogor, telaga kahuripan, hunian modern dibogor, area komersial dibogor, investasi properti">
 
     {{-- ROBOTS --}}
     <meta name="robots" content="index, follow">
@@ -29,6 +29,15 @@
     {{-- FAVICON --}}
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/android-icon-48x48.png') }}">
 
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "RealEstateAgent",
+          "name": "Telaga Kahuripan",
+          "url": "https://telagakahuripanofficial.com"
+        }
+    </script>
 
     {{-- SwiperJS --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
