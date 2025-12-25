@@ -28,6 +28,19 @@
     {{-- FAVICON --}}
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/android-icon-48x48.png') }}">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11555025174"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-11555025174');
+    </script>
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
