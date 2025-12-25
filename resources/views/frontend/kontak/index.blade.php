@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="py-10">
-        <div class="max-w-7xl mx-auto px-4 mt-10 md:px-8 lg:mt-20">
+        <div class="mb-10 max-w-7xl mx-auto px-4 mt-10 md:px-8 lg:mt-20">
             <div class="text-center mb-10">
                 <h2 class="text-1xl md:text-3xl font-bold text-gray-800 mb-1">HUBUNGI KAMI</h2>
             </div>

@@ -104,7 +104,7 @@
 
 
     <!-- CTA -->
-    <section class="bg-yellow-400 py-12 text-center">
+    <section class="mb-10 bg-yellow-400 py-12 text-center">
         <h2 class="text-lg md:text-3xl font-bold">TERTARIK DENGAN UNIT KAMI?</h2>
         <p class="mt-1 text-sm md:text-[20px] text-gray-700">Hubungi kami untuk mendapatkan informasi lebih lanjut.</p>
 

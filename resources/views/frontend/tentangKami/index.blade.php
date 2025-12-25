@@ -26,7 +26,7 @@
                         <span class="w-2 h-2 bg-red-500 rounded-full"></span> Komunitas Lokal yang Hebat
                     </li>
                     <li class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-red-500 rounded-full"></span> Pusat Bermain Besar di Halaman
+                        <span class="w-2 h-2 bg-red-500 rounded-full"></span> Pusat Bermain Besar
                     </li>
                 </ul>
             </div>

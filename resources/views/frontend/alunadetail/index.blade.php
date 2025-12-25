@@ -165,7 +165,7 @@
             </div>
         </div>
     </div>
-    <div class=" max-w-7xl mx-auto bg-white rounded-xl shadow-sm p-2">
+    <div class="mb-10 max-w-7xl mx-auto bg-white rounded-xl shadow-sm p-2">
         <h2 class="text-xs md:text-2xl font-semibold text-gray-800 mb-2">
             Lokasi
         </h2>

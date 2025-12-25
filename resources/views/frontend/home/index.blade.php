@@ -97,7 +97,7 @@
                             hingga mewah.
                         </p>
                         <a href="{{ Route('aluna') }}"
-                            class="text-xs block text-end px-4  text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:py-2 lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
@@ -129,7 +129,7 @@
                             hingga mewah.
                         </p>
                         <a href="{{ Route('putanutu') }}"
-                            class=" text-xs block text-end px-4 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:py-2 lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
@@ -220,12 +220,11 @@
                             {{-- <i class="fas fa-home text-blue-500 mr-2"></i> --}}
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">KANAKA</h3>
                         </div>
-                        <p class="text-xs  text-gray-600 mb-2 lg:text-sm">Temukan berbagai pilihan rumah mulai dari tipe
-                            sederhana
-                            hingga mewah.
+                        <p class="text-xs  text-gray-600 mb-2 lg:text-sm">Temukan area komersil mulai dari harga
+                            termurah.
                         </p>
                         <a href="{{ Route('kanaka') }}"
-                            class="text-xs block text-end px-4 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:py-2 lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
@@ -327,7 +326,7 @@
 
     <!-- Content Section 1 -->
     <section class="px-4 py-10 bg-white">
-        <div class="container mx-auto">
+        <div class="container mb-10 mx-auto">
             <h2 class="mb-2 text-1xl md:text-3xl font-bold text-gray-800">
                 SEBUAH LOTUS HIDUP SEIMBANG
             </h2>

@@ -1,9 +1,9 @@
 @extends('frontend/layouts/app')
 
 @section('content')
-    <div class="container mx-auto px-4 py-10">
+    <div class="container mx-auto px-4 py-5 mb-10">
         <!-- Header Section -->
-        <div class="text-center mt-[60px] mb-6 lg:mt-10 fade-in">
+        <div class="text-center mt-[60px] mb-6 lg:mt-20 fade-in">
             <h1 class="text-1xl md:text-3xl font-bold text-gray-800">TEMUKAN PROPERTI IMPIAN ANDA</h1>
             <p class=" text-xs text-gray-600 max-w-2xl mx-auto lg:mt-2 lg:text-[18px]">Jelajahi berbagai kategori properti
                 yang
@@ -58,7 +58,7 @@
                             hingga mewah.
                         </p>
                         <a href="{{ Route('aluna') }}"
-                            class=" text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
@@ -90,7 +90,7 @@
                             hingga mewah.
                         </p>
                         <a href="{{ Route('putanutu') }}"
-                            class=" text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
@@ -118,10 +118,10 @@
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">KANAKA</h3>
                         </div>
                         <p class="text-xs lg:text-[16px] text-gray-600 mb-2">Temukan area komersil mulai dari harga
-                            termurah
+                            termurah dengan fasilitas yang mewah.
                         </p>
                         <a href="{{ Route('kanaka') }}"
-                            class="text-xs block text-end px-4 lg:py-2 text-blue-600 font-medium hover:text-blue-800 group-hover:underline lg:text-[18px]">
+                            class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
                             {{-- <i class="fas fa-chevron-right ml-1 text-sm"></i> --}}
                         </a>
