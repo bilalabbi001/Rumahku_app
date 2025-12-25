@@ -140,11 +140,11 @@
             <div class="bg-white rounded-2xl shadow p-6 text-center">
                 <img src="{{ asset('assets/image/imagee.jpg') }}" class="h-40 mx-auto rounded-full mb-2">
                 <h3 class="text-xs md:text-lg font-semibold">Kartini Aprilia</h3>
-                <p class="text-xs md:text-sm text-gray-500 mb-3">Property Konsultan</p>
+                <p class="text-xs md:text-sm text-gray-500 mb-3">Konsultan Properti</p>
                 <div class="text-xs md:text-sm space-y-1">
-                    <p><i class="fa-solid fa-phone"></i> +62 1717 865 888</p>
+                    <p><i class="fa-solid fa-phone"></i> +628 1717 865 888</p>
                     <p><i class="fa-solid fa-envelope"></i> Kartini.nabindra@gmail.com</p>
-                    <p><i class="fa-solid fa-globe"></i> www.lenterarumah.com</p>
+                    <p><i class="fa-solid fa-globe"></i> www.telagakahuripanofficial.com</p>
                 </div>
             </div>
 
