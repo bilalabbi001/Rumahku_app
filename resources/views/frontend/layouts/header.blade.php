@@ -8,7 +8,7 @@
 
     {{-- TTITLE CEO --}}
     <title>{{ $title ?? 'Jual Cluster Di Bogor' }}</title>
-    
+
 
     {{-- META DESCRIPTION --}}
     <meta name="description"
@@ -23,12 +23,10 @@
     <meta name="robots" content="index, follow">
 
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     {{-- FAVICON --}}
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/android-icon-48x48.png') }}">
-
 
     <script type="application/ld+json">
         {
