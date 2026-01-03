@@ -137,7 +137,8 @@
         <div class="space-y-6">
             <!-- Agent Info -->
             <div class="bg-white rounded-2xl shadow p-6 text-center">
-                <img src="{{ asset('assets/image/imagee.jpg') }}" class="h-40 mx-auto rounded-full mb-2">
+                <img src="{{ asset('assets/image/imagee.jpg') }}" alt="agent profil"
+                    class="h-40 mx-auto rounded-full mb-2">
                 <h3 class="text-xs md:text-lg font-semibold">Kartini Aprilia</h3>
                 <p class="text-xs md:text-sm text-gray-500 mb-3">Konsultan Properti</p>
                 <div class="text-xs md:text-sm space-y-1">

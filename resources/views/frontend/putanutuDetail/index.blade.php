@@ -5,7 +5,7 @@
     <div class="relative bg-gray-900 py-20 px-2 overflow-hidden">
         <!-- Gambar Latar Belakang Overlay (untuk efek gelap) -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="City Background"
+            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="Telaga Kahuripan"
                 class="w-full h-full object-cover object-top opacity-20">
             <!-- Anda bisa menyesuaikan opacity (misal: opacity-40, opacity-50) untuk tingkat kegelapan -->
         </div>
@@ -28,23 +28,24 @@
                 <div class="swiper mySwiper2 rounded-lg">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image) }}" alt="Adena Type - 35"
                                 class="w-full h-full object-cover object-bottom sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px] lg:object-cover">
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image1) }}"
+                                alt="Dapur dengan view menghadap gunung langsung"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image2) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image2) }}" alt="Kamar yang luas"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image3) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image3) }}" alt="Kamar mandi yang luas"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image4) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image4) }}" alt="Kamar tidur utama"
                                 class="w-full h-full sm:h-80 md:h-[400px] object-cover rounded-lg lg:h-[600px]">
                         </div>
                     </div>
@@ -57,23 +58,24 @@
                 <div class="swiper mySwiper mt-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image) }}" alt="Adena Type - 35"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
                             <img src="{{ asset('assets/images/' . $produk->image1) }}"
+                                alt="Dapur dengan view menghadap gunung langsung"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image2) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image2) }}" alt="Kamar yang luas"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image3) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image3) }}" alt="Kamar mandi yang luas"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('assets/images/' . $produk->image4) }}"
+                            <img src="{{ asset('assets/images/' . $produk->image4) }}" alt="Kamar tidur utama"
                                 class="h-16 sm:h-20 w-full object-cover rounded-lg cursor-pointer">
                         </div>
                     </div>
@@ -138,7 +140,8 @@
         <div class="space-y-6">
             <!-- Agent Info -->
             <div class="bg-white rounded-2xl shadow p-6 text-center">
-                <img src="{{ asset('assets/image/imagee.jpg') }}" class="h-40 mx-auto rounded-full mb-2">
+                <img src="{{ asset('assets/image/imagee.jpg') }}" alt="Seorang Agent"
+                    class="h-40 mx-auto rounded-full mb-2">
                 <h3 class="text-xs md:text-lg font-semibold">Kartini Aprilia</h3>
                 <p class="text-xs md:text-sm text-gray-500 mb-3">Konsultan Properti</p>
                 <div class="text-xs md:text-sm space-y-1">

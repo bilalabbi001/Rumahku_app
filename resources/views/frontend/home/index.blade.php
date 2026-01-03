@@ -44,12 +44,7 @@
         <div class="text-center mb-6 lg:mt-10 fade-in">
             <h1 class="text-1xl md:text-3xl font-bold text-gray-800">TEMUKAN PROPERTI IMPIAN ANDA</h1>
             <p class=" text-xs text-gray-600 max-w-2xl mx-auto font-semibold lg:mt-2 lg:text-lg">Jelajahi berbagai kategori
-                properti
-                yang
-                kami
-                sediakan untuk
-                memenuhi
-                kebutuhan Anda</p>
+                properti yang kami sediakan untuk memenuhi kebutuhan Anda</p>
         </div>
 
         <!-- Filter Section -->
@@ -91,11 +86,8 @@
                             {{-- <i class="fas fa-home text-blue-500 mr-2"></i> --}}
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">CLUSTER ALUNA</h3>
                         </div>
-                        <p class="text-xs text-gray-600 mb-2  lg:text-sm">Temukan berbagai pilihan rumah mulai
-                            dari tipe
-                            sederhana
-                            hingga mewah.
-                        </p>
+                        <p class="text-xs text-gray-600 mb-2  lg:text-sm">Temukan berbagai pilihan rumah mulai dari tipe
+                            sederhana hingga mewah.</p>
                         <a href="{{ Route('aluna') }}"
                             class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
                             Lihat Properti
@@ -125,8 +117,7 @@
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">CLUSTER PUTANUTU</h3>
                         </div>
                         <p class="text-xs text-gray-600 mb-2 lg:text-sm">Temukan berbagai pilihan rumah mulai dari tipe
-                            sederhana
-                            hingga mewah.
+                            sederhana hingga mewah.
                         </p>
                         <a href="{{ Route('putanutu') }}"
                             class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
@@ -207,7 +198,7 @@
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-lg">
                     <div class="relative overflow-hidden h-48">
                         <img src="{{ asset('assets/image/kanaka.png') }}"
-                            alt="Rumah modern minimalis dengan taman depan dan garasi"
+                            alt="Ruko modern dan minimalis dengan halaman depan yang luas"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
@@ -220,8 +211,7 @@
                             {{-- <i class="fas fa-home text-blue-500 mr-2"></i> --}}
                             <h3 class="text-1xl font-bold text-gray-800 lg:mb-2">KANAKA</h3>
                         </div>
-                        <p class="text-xs  text-gray-600 mb-2 lg:text-sm">Temukan area komersil mulai dari harga
-                            termurah.
+                        <p class="text-xs  text-gray-600 mb-2 lg:text-sm">Temukan area komersil mulai dari harga termurah.
                         </p>
                         <a href="{{ Route('kanaka') }}"
                             class="bg-blue-600 text-xs block text-center rounded py-1 lg:py-2 text-white font-medium lg:text-[18px]">
@@ -327,9 +317,7 @@
     <!-- Content Section 1 -->
     <section class="px-4 py-10 bg-white">
         <div class="container mb-10 mx-auto">
-            <h2 class="mb-2 text-1xl md:text-3xl font-bold text-gray-800">
-                SEBUAH LOTUS HIDUP SEIMBANG
-            </h2>
+            <h2 class="mb-2 text-1xl md:text-3xl font-bold text-gray-800"> SEBUAH LOTUS HIDUP SEIMBANG </h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <p class="text-[15px] lg:text-[20px] text-gray-600 mb-3">
@@ -351,8 +339,7 @@
                 </div>
                 <div class="h-64 md:h-auto rounded-lg overflow-hidden shadow-xl">
                     <img src="{{ asset('assets/img/cover/cover1.jpg') }}"
-                        alt="Teratai dengan sempurna melambangkan konsep
-                        ilahi hidup sehat"
+                        alt="Teratai dengan sempurna melambangkan konsep ilahi hidup sehat"
                         class="w-full h-full object-cover" />
                 </div>
             </div>

@@ -18,7 +18,7 @@
     <div class="relative bg-gray-900 py-20 px-2 overflow-hidden">
         <!-- Gambar Latar Belakang Overlay (untuk efek gelap) -->
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="City Background"
+            <img src="{{ asset('assets/img/cover/cover.jpg') }}" alt="Rumah modern dan minimalis dengan taman depan yang luas"
                 class="w-full h-full object-cover object-top opacity-20">
             <!-- Anda bisa menyesuaikan opacity (misal: opacity-40, opacity-50) untuk tingkat kegelapan -->
         </div>
@@ -42,7 +42,7 @@
                 <div class="bg-white rounded-md overflow-hidden card-shadow">
                     <div class="relative">
                         <img src="{{ asset('assets/images/' . $produk->image) }}"
-                            alt="Modern two-story house with large windows and wooden accents in a suburban neighborhood"
+                            alt="Rumah modern dan minimalis dengan taman depan yang luas"
                             class="w-full object-cover object-contain" />
                         <div class="absolute -top-1 right-4 bg-red-500 text-white px-2 py-1 rounded-sm text-sm font-bold">
                             {{ $produk->title }}
@@ -71,8 +71,9 @@
 
                         <div class="mt-6 pt-4 border-t border-gray-200">
                             <a href="{{ route('putanutu.show', $produk->slug) }}"
-                                class="w-full text-xs block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 md:text-md">Lihat
-                                Detail</a>
+                                class="w-full text-xs block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 md:text-md">
+                                Lihat Detail
+                            </a>
                         </div>
                     </div>
                 </div>

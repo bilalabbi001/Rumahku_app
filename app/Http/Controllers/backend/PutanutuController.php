@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\backend;
 
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PutanutuRequestStore;
 use App\Http\Requests\PutanutuUpdateRequest;
 use App\Models\Putanutu;
-use Illuminate\Support\Facades\Storage;
 
 class PutanutuController extends Controller
 {
@@ -45,7 +43,10 @@ class PutanutuController extends Controller
         if ($request->hasFile('image')) { // jika ada request   file gambar dari inputan user
 
             $file = $request->file('image'); // Ambil file gambar dari inputan user
-            $fileName = uniqid() . '.' . $file->getClientOriginalExtension(); // Ganti nama file gambar dan set menjadi unik
+
+            $slug = Str::slug($request->title ?? 'produk');
+
+            $fileName = $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension(); // Ganti nama file gambar dan set menjadi unik
             $file->move($uploadPath, $fileName); // Masukan file gambar ke polder images
 
             $data['image'] = $fileName;
@@ -59,7 +60,10 @@ class PutanutuController extends Controller
             if ($request->hasFile($field)) {
 
                 $file = $request->file($field);
-                $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+                $slug = Str::slug($request->title ?? 'produk');
+
+                $fileName = $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 $file->move($uploadPath, $fileName);
 
                 $data[$field] = $fileName;
@@ -122,7 +126,12 @@ class PutanutuController extends Controller
 
             // Upload file baru jika ada perubahan file
             $file = $request->file('image');
-            $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $slug = Str::slug($request->title ?? 'produk');
+
+            $fileName = strtolower(
+                $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension()
+            );
             $file->move($uploadPath, $fileName);
 
             // Simpan file baru ke dalam array
@@ -145,7 +154,10 @@ class PutanutuController extends Controller
 
                 // Upload file baru
                 $file = $request->file($field);
-                $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+                $slug = Str::slug($request->title ?? 'produk');
+                $fileName = strtolower(
+                    $slug . '-' .  uniqid() . '.' . $file->getClientOriginalExtension()
+                );
                 $file->move($uploadPath, $fileName);
 
                 // Simpan file baru ke dalem array

@@ -66,7 +66,7 @@
                                         </td>
 
                                         <td>
-                                            <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+                                            <div class="d-flex flex-wrap justify-content-center">
                                                 <a href="{{ route('admin.aluna.edit', $produk->id) }}"
                                                     class="btn btn-sm btn-warning mr-2 mt-2">
                                                     <i class="fas fa-edit"></i>

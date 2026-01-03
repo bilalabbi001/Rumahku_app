@@ -4,9 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Models\Aluna;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AlunaStoreRequest;
 use App\Http\Requests\AlunaUpdateRequest;
 
@@ -44,7 +42,11 @@ class AlunaController extends Controller
         // Upload file gambar
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            // extensi nama file image
+            $slug = Str::slug($request->title ?? 'produk');
+
+            $fileName = $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
             $file->move($uploadPath, $fileName);
             $data['image'] = $fileName;
         }
@@ -56,7 +58,11 @@ class AlunaController extends Controller
 
             if ($request->hasFile($field)) {
                 $file = $request->file($field);
-                $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+                // extensi nama file image
+                $slug = Str::slug($request->title);
+
+                $fileName = $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 $file->move($uploadPath, $fileName);
 
                 $data[$field] = $fileName;
@@ -115,7 +121,14 @@ class AlunaController extends Controller
 
             // Upload file baru
             $file = $request->file('image'); // simpan file baru ketika ada upload
-            $fileName = uniqid() . '.' . $file->getClientOriginalExtension(); // Beri nama unik pada file image
+
+            $slug = Str::slug($request->title ?? 'produk');
+
+            $fileName = strtolower(
+                $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension()
+            );
+
+            // Beri nama unik pada file image
             $file->move($uploadPath, $fileName); // masukan file ke polder public/images
 
             $data['image'] = $fileName; // Simpan file baru ke dalam array
@@ -139,7 +152,12 @@ class AlunaController extends Controller
 
                 // Upload file baru
                 $file = $request->file($field);
-                $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+                $slug = Str::slug($request->title ?? 'produk');
+
+                $fileName = strtolower(
+                    $slug . '-' . uniqid() . '.' . $file->getClientOriginalExtension()
+                );
                 $file->move($uploadPath, $fileName);
 
                 $data[$field] = $fileName;

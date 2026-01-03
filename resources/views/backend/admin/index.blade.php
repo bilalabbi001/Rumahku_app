@@ -26,10 +26,11 @@
 
             <!-- Default box -->
             <div class="card">
-                <div class="card-header">
-
+                <div class="card-header text-center">
+                    <small>Hallo selamat datang <strong>{{ Auth::user()->name }}</strong></small>
                 </div>
                 <div class="card-body">
+
                 </div>
                 <!-- /.card-body -->
             </div>

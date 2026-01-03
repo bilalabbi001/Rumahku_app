@@ -26,7 +26,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     {{-- FAVICON --}}
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/android-icon-48x48.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo/logooffice.png') }}">
+
+    <link rel="icon" type="image/png" sizes="48x48"
+        href="https://telagakahuripanofficial.com/assets/img/logo/logooffice.png">
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://telagakahuripanofficial.com/assets/img/logo/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://telagakahuripanofficial.com/assets/img/logo/favicon-16x16.png">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11555025174"></script>
